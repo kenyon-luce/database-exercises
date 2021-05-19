@@ -10,40 +10,29 @@
 --     Change 'Michael Jackson' to 'Peter Jackson'
 --     Add SELECT statements after each UPDATE so you can see the results of your handiwork.
 
-USE codeup_test_db
+USE codeup_test_db;
 
-SELECT 'All albums from table';
---before
 SELECT * FROM albums;
 
-SELECT 'All albums from table (change sales times 10)'
 UPDATE albums
 SET sales = sales * 10;
---after
 SELECT * FROM albums;
 
-
-SELECT 'All albums released before 1980';
---before
 SELECT * FROM albums WHERE release_date < 1980;
 
-SELECT 'All albums released before 1980 (change into 1800s)';
 UPDATE albums
 SET release_date = release_date - 100
 WHERE release_date < 1980;
---after
 SELECT * FROM albums WHERE release_date < 1980;
 
-
-SELECT 'All albums by Michael Jackson';
---before
 SELECT * FROM albums WHERE artist = 'Michael Jackson';
 
-SELECT 'All albums by Michael Jackson (change to Peter Jackson)';
 UPDATE albums
 SET artist = 'Peter Jackson'
 WHERE artist = 'Michael Jackson';
---after
 SELECT * FROM albums WHERE artist = 'Michael Jackson';
 
 -- mysql -u codeup_test_user -p < update_exercises.sql;
+/* ok...when i added notes telling me this is 'before' and this is 'after' the update, when running my code it would read 'before' and 'after' (even though it was commented) and returned an error. Every other comment works fine...Noted
+   UPDATE: the problem weren't the notes themselves, I was using command / to comment and it would add the -- automatically, but an actual comment is "/*"
+ */
