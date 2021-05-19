@@ -29,3 +29,7 @@ values ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
         ('Guns N Roses', 'Appetite for Destruction', 1987, 'Hard rock', 21.9),
         ('Elton John', 'Goodbye Yellow Brick Road', 1973, 'rock, pop rock, glam rock', 8.5),
         ('Pink Floyd', 'The Wall', 1979, 'Progressive rock', 18.7);
+
+-- mysql -u codeup_test_user -p < albums_seeder.sql
+-- (log in to codeup_test_db)
+-- SELECT * FROM albums
