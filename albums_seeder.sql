@@ -3,7 +3,7 @@ codeup_test_db
 
 INSERT INTO albums (artist, name, release_date, genre, sales)
 values ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
-    ('AC/DC', 'Back in Black', 1980, 'Hard rock', 26.1),
+        ('AC/DC', 'Back in Black', 1980, 'Hard rock', 26.1),
        ('Pink Floyd', 'The Dark Side of the Moon', 1973, 'Progressive rock', 24.2),
        ('Meat Loaf', 'Bat Out of Hell', 1977, 'Hard rock, Progressive rock', 21.5),
        ('Whitney Houston / Various artists', 'The Bodyguard', 1992, 'R&B, Soul, Pop, Soundtrack', 28.4),
@@ -24,4 +24,9 @@ values ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
        ('The Beatles', '1', 2000, 'Rock', 22.6),
        ('Michael Jackson', 'Dangerous', 1991, 'Rock, Funk, Pop', 16.3),
        ('Madonna', 'The Immaculate Collection', 1990, 'Pop, Dance', 19.4),
-       ('The Beatles', 'Abbey Road', 1969, 'Rock', 14.4);
+       ('The Beatles', 'Abbey Road', 1969, 'Rock', 14.4),
+        ('Bruce Springsteen', 'Born in the U.S.A.', 1984, 'Heartland Rock', 19.6),
+        ('Nirvana', 'Nevermind', 1991, 'Grunge, alternative rock', 16.7),
+        ('Guns N Roses', 'Appetite for Destruction', 1987, 'Hard rock', 21.9),
+        ('Elton John', 'Goodbye Yellow Brick Road', 1973, 'rock, pop rock, glam rock', 8.5),
+        ('Pink Floyd', 'The Wall', 1979, 'Progressive rock', 18.7);
