@@ -16,4 +16,6 @@ how to get no '%qu%'?
 update: fixed using NOT LIKE query
 */
 
-/*mysql -u codeup_test_user -p < where_exercises.sql;*/
+/*mysql -u codeup_test_user -p < where_exercises.sql;
+  (or log into root in terminal and copy paste each SELECT query)
+*/
