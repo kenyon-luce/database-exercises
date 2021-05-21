@@ -6,7 +6,12 @@ SELECT CONCAT(first_name, ' ', last_name) FROM employees WHERE last_name LIKE 'E
 
 SELECT * FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25;
 
-SELECT * FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25;
+SELECT * FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25 AND (year(hire_date) BETWEEN 1990 AND 2000) ORDER BY birth_date ASC, hire_date DESC;
+
+
+
+SELECT *, datediff(curdate(), hire_date) AS days_worked FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25 AND (year(hire_date) BETWEEN 1990 AND 2000);
+
 
 -- SELECT * FROM employees WHERE last_name LIKE 'E%' AND last_name LIKE '%E' ORDER BY emp_no DESC;
 
