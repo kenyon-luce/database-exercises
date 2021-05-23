@@ -36,8 +36,8 @@ SELECT title,
 FROM titles
 GROUP BY title; --counts employees with each title, need to filter to Customer Service
 
-SELECT titles.title,
-       count(titles.title)
+SELECT titles.title AS titles,
+       count(titles.title) AS count
 FROM titles
     JOIN dept_emp
         ON dept_emp.emp_no = titles.emp_no
@@ -52,7 +52,7 @@ GROUP BY titles.title;
 
 SELECT departments.dept_name AS department,
        concat(first_name, ' ', last_name) AS manager,
-       salaries.salary
+       salaries.salary AS salary
 FROM employees
     JOIN dept_manager
         ON employees.emp_no = dept_manager.emp_no
