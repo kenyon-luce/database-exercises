@@ -23,3 +23,6 @@ SELECT title, count(title) FROM titles GROUP BY title; --counts employees with e
 SELECT titles.title, count(titles.title) FROM titles JOIN dept_emp ON dept_emp.emp_no = titles.emp_no JOIN departments ON departments.dept_no = dept_emp.dept_no WHERE departments.dept_name = 'Customer Service' AND (year(dept_emp.to_date) = 9999 AND year(titles.to_date) = 9999) GROUP BY titles.title;
 --its not filtering to current employees, even though I added it in the WHERE query
 --update: fixed, what I did was correct, I just didn't take into account that titles also had a to_date that wasn't being filtered
+
+SELECT departments.dept_name AS department, concat(first_name, ' ', last_name) AS manager, salaries.salary FROM employees JOIN dept_manager ON employees.emp_no = dept_manager.emp_no JOIN departments ON dept_manager.dept_no = departments.dept_no JOIN salaries ON employees.emp_no = salaries.emp_no WHERE year(salaries.to_date) = 9999 AND year(dept_manager.to_date) = 9999 ORDER BY salaries.salary DESC; --get each manager's salary
+
