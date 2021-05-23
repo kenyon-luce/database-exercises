@@ -20,6 +20,6 @@ SELECT departments.dept_name AS department, concat(first_name, ' ', last_name) A
 
 SELECT title, count(title) FROM titles GROUP BY title; --counts employees with each title, need to filter to Customer Service
 
-SELECT titles.title, count(titles.title) FROM titles JOIN employees ON employees.emp_no = titles.emp_no GROUP BY titles.title;
-
-SELECT titles.title, count(titles.title) FROM titles JOIN current_dept_emp ON current_dept_emp.emp_no = titles.emp_no JOIN departments ON departments.dept_no = current_dept_emp.dept_no WHERE departments.dept_no = 'Customer Service' AND year(current_dept_emp.to_date) = 9999 GROUP BY titles.title;
+SELECT titles.title, count(titles.title) FROM titles JOIN dept_emp ON dept_emp.emp_no = titles.emp_no JOIN departments ON departments.dept_no = dept_emp.dept_no WHERE departments.dept_name = 'Customer Service' AND (year(dept_emp.to_date) = 9999 AND year(titles.to_date) = 9999) GROUP BY titles.title;
+--its not filtering to current employees, even though I added it in the WHERE query
+--update: fixed, what I did was correct, I just didn't take into account that titles also had a to_date that wasn't being filtered
