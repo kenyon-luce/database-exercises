@@ -37,7 +37,7 @@ FROM titles
 GROUP BY title; --counts employees with each title, need to filter to Customer Service
 
 SELECT titles.title AS titles,
-       count(titles.title) AS count
+       count(titles.title)
 FROM titles
     JOIN dept_emp
         ON dept_emp.emp_no = titles.emp_no
